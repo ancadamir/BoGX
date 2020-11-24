@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width">
+  <title>Botanical Garden Tour</title>
+  <link rel="stylesheet" href="scholarly.css">
+  <link rel="stylesheet" href="prism-coy.css">
+</head>
+<style>
+  body {
+    max-width: 23cm;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: Lucida Sans Unicode, sans-serif;
+    text-align: justify;
+  }
+</style>
+
+<body>
+
+  <h1 style="color: #ebc8b2; margin-left:50px">Botanical Garden Tour Technical Report</h1>
+  <section>
+    <h1 style="color: #46008B; margin-left:50px">Content</h1>
+    <h1><a href="#abstract" style="color: #7272FE; margin-left:100px; text-decoration: none">1. Abstract</a></h1>
+    <h1><a href="#introduction" style="color: #7272FE; margin-left:100px; text-decoration:none">2. Introduction</a></h1>
+    <h1><a href="#structure" style="color:#7272FE; margin-left:100px; text-decoration:none">3. Application Structure</a></h1>
+    <h1>&emsp; &emsp; <a href="#qr-code" ; style="color: #7272FE; margin-left:100px">3.1. QR Code</a></h1>
+	    <h1>&emsp; &emsp; <a href="#rfid" ; style="color: #7272FE; margin-left:100px">3.2. RFID</a></h1>
+			    <h1>&emsp; &emsp; <a href="#html5" ; style="color: #7272FE; margin-left:100px">3.3. HTML5</a></h1>
+	    <h1>&emsp; &emsp; <a href="#css" ; style="color: #7272FE; margin-left:100px">3.4. CSS</a></h1>
+	    <h1>&emsp; &emsp; <a href="#angularJS" ; style="color: #7272FE; margin-left:100px">3.5. AngularJS</a></h1>
+    <h1>&emsp; &emsp;<a href="#database" ; style="color: #7272FE; margin-left:100px">3.6. Database</a></h1>
+    <h1>&emsp; &emsp;<a href="#translate-bot" ; style="color: #7272FE; margin-left:100px">3.7. Instant Translate bot</a></h1>
+	    <h1>&emsp; &emsp;<a href="#server" ; style="color: #7272FE; margin-left:100px">3.8. Web Sever</a></h1>
+			    <h1>&emsp; &emsp;<a href="#environment" ; style="color: #7272FE; margin-left:100px">3.9. Node.js</a></h1>
+    <h1>&emsp; &emsp;<a href="#external-data" ; style="color: #7272FE; margin-left:100px">3.10. External Data</a></h1>
+    </h1>
+    <h1><a href="#references" ; style="color: #7272FE; margin-left:100px; text-decoration: none">4. References</a></h1>
+    <h1><a href="#authors" ; style="color: #7272FE; margin-left:100px;  text-decoration: none">5. Authors</a></h1>
+
+    <h2 id="abstract" style="color: #5e9ca0">1. Abstract</h2>
+
+    <article style="line-height: 30px; margin-right: 50px">
+      <p>This Scholarly HTML document describes the Web system internals of the Botanical Garden Tour (BTG) Application.</p>
+      <br>
+
+      <h2 id="introduction" style="color: #5e9ca0">2. Introduction</h2>
+      <article style="line-height: 30px; margin-right: 50px">
+        <p> The purpose of the application is to assist the visitor during a botanical garden tour. Gives the possibility to download it from an app store by using the QR code printed on the ticket purchased previously.
+		The application will use the position of the visitor in the botanical garden by using the RFID, in order to determine the persons location and provide him useful audio and video information. The content is available in two languages: english and romanian. If the visitor wants to find out more information about a certain exhibits he just only have to take a picture on the label of the element in order to have access to details of interest. At the end of the tour, the user has the opportunity to see an overview of all the elements that he was interested in.
+    The application offers also the possibility to give a sugestion and also to see all the announcements. If the user was impresed by the application and wants to be up to date with all the news about the botanical garden can subscribe to the newsletter.</p>
+        <br>
+
+
+
+        <h2 id="structure" style="color: #5e9ca0">3. Application Structure</h2>
+        <p>The following section will contain all the Web system internals of the BGT Application.</p>
+
+        <h2 style="color: #7272FE" id="qr-code">3.1. QR Code</h2>
+
+
+        <p>The QR code will be integrated by using The METAQRCODE API, which provides developers the way to create their own XML metadata and put it inside a QRCode. This API is Rest based, and can be formed using JSON or XML. For out application, we are going to use are JSON.The main reason why we are using JSON is because is an API with a single purpose. It is more easier to develop and the support is more easy to find.</p>
+		
+		<h2 style="color: #7272FE" id="rfid">3.2. RFID</h2>
+
+
+        <p>In order for the app to know the user position in the botanical garden, we will use the RFID technology. For each area of the botanical garden will be an RFID transmitor. The app will read the data from the RFID and will provide to the user the informations from that section. In order to do this, we are ging to use <a href="https://www.rfidjournal.com/articles/view?10647">Technology Solutions (UK) Ltd.</a></p>
+		<p> The RFID is designed to read and write to tags and provides a developer with a set of commands that carry out multiple actions locally within the Bluetooth reader.</p>
+
+
+		<h2 style="color: #7272FE" id="html5">3.3. HTML5</h2>
+
+
+        <p>HTML is a markup language used for structuring and presenting content on the World Wide Web. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. 
+        HTML5 includes detailed processing models to encourage more interoperable implementations; it extends, improves, and rationalizes the markup available for documents and introduces markup and application programming interfaces (APIs) for complex web applications.</p>
+
+		<h2 style="color: #7272FE" id="css">3.4. CSS</h2>
+
+
+        <p>Cascading Style Sheets is a standard used for formatting elements of an HTML document. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. </p>
+		
+		<h2 style="color: #7272FE" id="angularJS">3.5. AngularJS</h2>
+
+
+        <p>AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. The AngularJS framework works by first reading the Hypertext Markup Language (HTML) page, which has an additional custom HTML attributes embedded into it. Angular interprets those attributes as directives to bind input or output parts of the page to a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be manually set within the code, or retrieved from static or dynamic JSON resources.</p>
+
+
+        <h2 style="color: #7272FE" id="database">3.6. Database</h2>
+
+        <p> As database we are going to use PostgresSql. We decided to use this type of database because we worked with it and is the one that we are more familiar with. is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance. It is designed to handle a range of workloads, from single machines to data warehouses or Web services with many concurrent users.   </p>
+
+        <h2 style="color: #7272FE" ; id="translate-bot">3.7. Instant Translate bot</h2>
+
+        <p>Giving the users the opportunity to receive the information both english and romanian, in order to do that,we are going to use an instant translate bot. <a href="https://thereisabotforthat.com/bots/insttranslatebot">The Instant Bot</a> can translate between 104 languages.</p>
+		
+	   <h2 style="color: #7272FE" ; id="server">3.8. Web Server</h2>
+
+        <p>The server that we are going to use is Apache Web Server. The source code of Apache is available for free to anyone and no license is required and does our life better and easier. Is easy to install, is highly reliable and performs better.</p>
+		<p>The application has one API between the Server and the application interface. This API will contain methods for Get, Post, Put and Delete and will have a json format. We have also another API that will retrieve data from the external site. The format will also be json and contains only in Get methods.</p>
+		
+				 <h2 style="color: #7272FE" ; id="environment">3.9. Node.js</h2>
+
+        <p>Node.js is a JavaScript runtime environment which allows you to easily build a server-side applications. Node.js brings event-driven programming to web servers, enabling development of fast web servers in JavaScript.Developers can create scalable servers without using threading, by using a simplified model of event-driven programming that uses callbacks to signal the completion of a task. The main advantages are that it offers an Easy Scalability, is easy to learn, uses a single programm language and you have the support of a large and active community. </p>
+
+        <h2 style="color: #7272FE" ; id="external-data">3.10. External Data</h2>
+
+        <p>The information used in order to create the project will be taken from the site <a href="https://www.uaic.ro/gradina-botanica-anastasie-fatu/">Grădina Botanică „Anastasie Fătu”</a>. The data will be stored in our PostgreSql Database. We will use an API to take the data from the site and import it into our application. </p>
+
+      </article>
+  </section>
+
+ 
+
+  <section>
+    <h2 style="color: #5e9ca0" id="references">4. References</h2>
+    <ol>
+      <li><a href="https://www.programmableweb.com/api/metaqrcode">METAQRCODE API</a></li>
+      <li><a href="https://www.programmableweb.com/api/trefle">Trefle API</a></li>
+       <li><a href="https://www.sciencedirect.com/science/article/pii/S240589631500350X/">An Overview on RFID</a></li>
+	    <li><a href="https://www.postgresql.org//">PostgresSql</a></li>
+      <li><a href="https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js/">Why to use Node.js</a> </li>
+      <li><a href="https://thereisabotforthat.com/bots/insttranslatebot">Instant Translate</a></li>
+	  <li><a href="https://www.kb.penguinbliss.com/?p=313">Apache Booster</a></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 style="color: #5e9ca0" id="authors">5. Authors</h2>
+    <ol>
+      <li>BACIU G. SORIN </li>
+      <li>LEONTE V. ANCA-STEFANIA CAS. DAMIR</li>
+      <li>TITI D.V. MARIA-VIOLETA</li>
+    </ol>
+  </section>
+
+</body>
+
+</html>
